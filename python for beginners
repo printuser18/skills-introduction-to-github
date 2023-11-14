@@ -1,0 +1,542 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyOffHXi0CUFzB//m4DxRf2F",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/printuser18/skills-introduction-to-github/blob/main/python%20for%20beginners\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "FSBZMA6t1m-9",
+        "outputId": "2e8cd1e6-45da-46b9-c3cc-27858f281ea7"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "<class 'str'> 18 99.9 True\n",
+            "<class 'int'>\n",
+            "<class 'float'>\n",
+            "<class 'bool'>\n"
+          ]
+        }
+      ],
+      "source": [
+        "#type is used to know which data type is the given variable or input is\n",
+        "a=\"virat\"\n",
+        "b= 18\n",
+        "c= 99.9\n",
+        "d = True\n",
+        "print(type(a),(b),(c),(d))\n",
+        "print(type(b))\n",
+        "print(type(c))\n",
+        "print(type(d))"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#asci is used to represent the characters in numerical format ,to know the asci value of any character we need to use a function called ord() which is only for string of length 1\n",
+        "a=\"V\"\n",
+        "print(ord(a))\n",
+        "b=\"v\"\n",
+        "print(ord(b))\n",
+        "c=\"1\"\n",
+        "print(ord(c))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "phjjJIiY13i9",
+        "outputId": "e3276576-a496-4393-a7e8-3b55d0b3b9a6"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "86\n",
+            "118\n",
+            "49\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#chr() is used to give character for ascii value\n",
+        "a=62\n",
+        "print(chr(a))\n",
+        "b=67\n",
+        "print(chr(b))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "znykzmk719GC",
+        "outputId": "0c25b94d-1d2f-440b-e189-f310dbbb2358"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            ">\n",
+            "C\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#print with seperator\n",
+        "a=\"virat\"\n",
+        "b= 18\n",
+        "c= 99.9\n",
+        "d = True\n",
+        "print(a,b,c,d,sep=\"->\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "IQ6MCvmL2B7w",
+        "outputId": "f3df9757-9225-4ff6-b9e5-bdf9c8fec69e"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "virat->18->99.9->True\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#input will always be considered as string, you need to convert it into which ever data type you want\n",
+        "a=input(\"enter your age:\")\n",
+        "print(type(a))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "xTdux3XA2Gx9",
+        "outputId": "47537374-9ff3-44c3-ff84-9190f09608d4"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "enter your age:18\n",
+            "<class 'str'>\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def addition(x,y):\n",
+        "  return x+y\n",
+        "def subtraction(x,y):\n",
+        "  return x-y\n",
+        "def multiplication(x,y):\n",
+        "  return x*y\n",
+        "def divison(x,y):\n",
+        "  return x/y\n",
+        "def floordivison(x,y):\n",
+        "  return x//y\n",
+        "def remainder(x,y):\n",
+        "  return x%y\n",
+        "def exponential(x,y):\n",
+        "  return x**y\n",
+        "\n",
+        "print(\"select operations:\"\n",
+        "      \"1-addition \"\n",
+        "      \"2-subtraction \"\n",
+        "      \"3-multiplication \"\n",
+        "      \"4-divison \"\n",
+        "      \"5-floor divison \"\n",
+        "      \"6-remainder \"\n",
+        "      \"7-exponential \",sep=(\"->\"))\n",
+        "a=int(input(\"select the operation: \"))\n",
+        "x=int(input(\"enter the first number: \"))\n",
+        "y=int(input(\"enter the second number: \"))\n",
+        "if a==1:\n",
+        "  print(addition(x,y))\n",
+        "if a==2:\n",
+        "  print(subtraction(x,y))\n",
+        "if a==3:\n",
+        "  print(multiplication(x,y))\n",
+        "if a==4:\n",
+        "  print(divison(x,y))\n",
+        "if a==5:\n",
+        "  print(floordivison(x,y))\n",
+        "if a==6:\n",
+        "  print(remainder(x,y))\n",
+        "if a==7:\n",
+        "  print(exponential(x,y))\n"
+      ],
+      "metadata": {
+        "id": "QACpjqLy2SHz",
+        "outputId": "cf765369-947d-44ae-baa1-84275fc18ba0",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "select operations:1-addition 2-subtraction 3-multiplication 4-divison 5-floor divison 6-remainder 7-exponential \n",
+            "select the operation: 5\n",
+            "enter the first number: 45\n",
+            "enter the second number: 18\n",
+            "2\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#ASSIGNEMENT operators\n",
+        "#=\n",
+        "n1=18\n",
+        "n2=n1\n",
+        "print(n2)\n",
+        "#+= n2+=n1-> n2=n2+n1\n",
+        "n2+=n1\n",
+        "print(n2)\n",
+        "# -= n2-=n1-> n2=n2-n1\n",
+        "n2=24\n",
+        "n2-=n1\n",
+        "print(n2)\n",
+        "# *= n2*=n1-> n2=n2*n1\n",
+        "n2*=n1\n",
+        "print(n2)\n",
+        "# **=\n",
+        "n2**=n1\n",
+        "print(n2)\n",
+        "# /=\n",
+        "n2=45\n",
+        "n2/=n1\n",
+        "print(n2)\n",
+        "# //=\n",
+        "n2=45\n",
+        "n2//=n1\n",
+        "print(n2)\n",
+        "#%=\n",
+        "n2=22\n",
+        "n2%=n1\n",
+        "print(n2)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "dqXdBm8sqDz7",
+        "outputId": "5750956b-b91b-4699-ced6-720bfb1c2732"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "18\n",
+            "36\n",
+            "6\n",
+            "108\n",
+            "3996019499184929743169818581358608384\n",
+            "2.5\n",
+            "2\n",
+            "4\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "n1=12\n",
+        "n2=18\n",
+        "n3=7\n",
+        "print(n1>n2)\n",
+        "print(n2>n3)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "zKoX3clrs5AD",
+        "outputId": "ce1f41e7-151d-44b5-b73c-176150c77cb8"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "False\n",
+            "True\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#logical operators :1. and-> returns true if both statements are true  2. or-> returns if one of statements is true 3.not -> reverse the result\n",
+        "a=18>45\n",
+        "b=18>7\n",
+        "print(a and b)\n",
+        "print(a or b)\n",
+        "print( not a)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "NswX3oK2viPB",
+        "outputId": "7c61a1fe-9fac-42a1-e916-cec21396c6fd"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "False\n",
+            "True\n",
+            "True\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#identity operators: 1.is-> returns true when two variables are same  2.is not->returns true when two variables are not same\n",
+        "x=18\n",
+        "y=12\n",
+        "z=18\n",
+        "print(x is y)\n",
+        "print(x is z)\n",
+        "print(x is not z)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "GRnGxUIyxLgj",
+        "outputId": "a65b0ac7-0459-474e-d684-6d6e37e95c84"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "False\n",
+            "True\n",
+            "False\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#membership operators :1.in-> returns true when a sequence has a specified value  2.not in-> returns true if a sequence with a specified value is not present in the object\n",
+        "favourites=[\"virat kohli\", \"dale steyn\", \"brendon mcculum\",\"praveen kumar\", \"waqar yonis\" ]\n",
+        "print(\"kohli\" in favourites)\n",
+        "print(\"virat kohli\" in favourites)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "23ms9VCu_dxi",
+        "outputId": "8edfcaed-aa8c-44ab-9e38-8d4b2fad5a3e"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "False\n",
+            "True\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#bitwise operators\n",
+        "a=5\n",
+        "b=3\n",
+        "print(\"a and b is \", a & b)\n",
+        "print(\"a or b is \", a | b)\n",
+        "print(\"a xor b is \", a^b)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "apitt7GpROc3",
+        "outputId": "cd9ca4df-1a8e-4124-fa62-2b205d28784d"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "a and b is  1\n",
+            "a or b is  7\n",
+            "a xor b is  6\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#VOLUME OF THE SPhERE (4/3)*πR^3\n",
+        "A=int(input(\"enter the radius of the sphere: \"))\n",
+        "b = (4/3)*(3.14*(A**3))\n",
+        "print(\"volume of the sphere is: \", b)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "yhWq0TcXsM_A",
+        "outputId": "d647bbe0-6b57-4c4b-9840-16e2277326c6"
+      },
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "enter the radius of the sphere: 5\n",
+            "volume of the sphere is:  523.3333333333333\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#typeovercasting\n",
+        "a=1\n",
+        "b=8\n",
+        "c=2\n",
+        "a_str=str(a)\n",
+        "b_str=str(b)\n",
+        "c_str=str(c)\n",
+        "d=a_str + b_str + c_str\n",
+        "print(\"final string: \",d)\n",
+        "final_int=int(d)\n",
+        "print(\"final integer: \",final_int)\n",
+        "a_int=int(a)\n",
+        "b_int=int(b)\n",
+        "c_int=int(c)\n",
+        "final_int1=a_int + b_int + c_int\n",
+        "print(\"final integer: \",final_int1)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "uBv5RKxKvPTT",
+        "outputId": "dfa9fc44-20e4-4798-a57d-060c8994578e"
+      },
+      "execution_count": 7,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "final string:  182\n",
+            "final integer:  182\n",
+            "final integer:  11\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#celsius to fahrenheit f=(c*9/5)+32\n",
+        "a=float(input(\"enter temperature in celsius: \"))\n",
+        "temperature_in_fahrenheit=(a*(9/5))+32\n",
+        "print(\"temperature in fahrenheit is: \",temperature_in_fahrenheit)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "uBrCTVeAwyWa",
+        "outputId": "ad5bcdb6-0c61-4a4e-e1e5-1d44fe8c2156"
+      },
+      "execution_count": 8,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "enter temperature in celsius: 32.8\n",
+            "temperature in fahrenheit is:  91.03999999999999\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
